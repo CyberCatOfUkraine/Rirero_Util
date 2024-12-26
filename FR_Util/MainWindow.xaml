@@ -1,0 +1,31 @@
+﻿<Window x:Class="FR_Util.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FR_Util"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="dgFiscalRegistars" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Назва служби" MinWidth="200" Binding="{Binding FR_Name}" />
+                <DataGridTextColumn Header="Тип ФР" Binding="{Binding FR_Type}" />
+                <DataGridTextColumn Header="IP" Binding="{Binding FR_IP}" />
+                <DataGridTextColumn Header="Port" Binding="{Binding FR_Port}" />
+                <DataGridTextColumn Header="COMPort" Binding="{Binding FR_COMPort}" />
+                <DataGridTextColumn Header="ComBods" Binding="{Binding FR_ComBods}" />
+                <DataGridTextColumn Header="ФН" Binding="{Binding FR_FN}" />
+                <DataGridTextColumn Header="Сигнатура" Binding="{Binding FR_Signature}" />
+                <DataGridTextColumn Header="Шлях до служби" Binding="{Binding FR_Path}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <ScrollBar Grid.Column="4" HorizontalAlignment="Right" MinWidth="20" VerticalAlignment="Stretch"/>
+    </Grid>
+</Window>
